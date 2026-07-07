@@ -11,7 +11,7 @@
             {{ t('projects.heading') }}
           </h2>
           <p class="mt-3 max-w-2xl text-sm leading-relaxed text-slate-500 sm:text-[15px]">
-            Selected work focused on product thinking, backend reliability, and modern user experiences.
+            {{ t('projects.subtitle') }}
           </p>
         </div>
         <a
@@ -33,7 +33,7 @@
           class="group relative flex flex-col overflow-hidden rounded-[28px] border border-white/10 bg-bg/70 shadow-[0_20px_60px_rgba(0,0,0,0.2)] transition-all duration-500 hover:-translate-y-2 hover:border-sky-400/30 hover:shadow-[0_24px_80px_rgba(56,189,248,0.12)]"
           :class="index % 2 === 0 ? 'xl:translate-y-3' : 'xl:-translate-y-3'"
         >
-          <div class="absolute inset-0 bg-gradient-to-br from-sky-500/8 via-transparent to-violet-500/8 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-sky-500/8 via-transparent to-violet-500/8 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
           <div class="h-1 w-full origin-center scale-x-0 bg-gradient-to-r from-transparent via-sky-400/60 to-transparent transition-transform duration-500 group-hover:scale-x-100" />
 
           <div v-if="project.featured" class="absolute right-4 top-4 z-10">

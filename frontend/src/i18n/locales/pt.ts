@@ -204,6 +204,7 @@ export default {
   projects: {
     tag: 'Trabalho',
     heading: 'Projetos Selecionados',
+    subtitle: 'Trabalho selecionado focado em pensamento de produto, confiabilidade de backend e experiências de usuário modernas.',
     allOnGithub: 'Todos os projetos no GitHub',
     featured: 'Destaque',
     code: 'Código',
