@@ -19,22 +19,23 @@ app.set('trust proxy', 1)
 app.use(helmet())
 
 // Configurar CORS dinámico para permitir localhost y el dominio de producción
+const stripTrailingSlash = (url: string) => url.endsWith('/') ? url.slice(0, -1) : url
+
 const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:5174',
   'http://localhost:4173',
   'https://luis-ortiz-portfolio.vercel.app',
-  process.env.FRONTEND_URL 
-].filter(Boolean) as string[];
+  process.env.FRONTEND_URL
+]
+  .filter(Boolean)
+  .map((url) => stripTrailingSlash(url as string))
 
 app.use(cors({
   origin: (origin, callback) => {
     if (!origin) return callback(null, true);
-    
-    // Normalizar el origen eliminando la barra final si existe
-    const normalizedOrigin = origin.endsWith('/') ? origin.slice(0, -1) : origin;
-    
-    if (allowedOrigins.some(allowed => allowed && (allowed === normalizedOrigin || allowed === origin))) {
+
+    if (allowedOrigins.includes(stripTrailingSlash(origin))) {
       callback(null, true);
     } else {
       console.warn(`CORS blocked request from origin: ${origin}`);
@@ -54,6 +55,14 @@ app.use('/api/contact',  contactRoutes)
 
 app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() })
+})
+
+app.use((err: Error, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
+  if (err.message === 'Not allowed by CORS') {
+    return res.status(403).json({ error: 'Origen no permitido por CORS.' })
+  }
+  console.error('[Unhandled Error]:', err)
+  res.status(500).json({ error: 'Error interno del servidor.' })
 })
 
 startScheduler()
