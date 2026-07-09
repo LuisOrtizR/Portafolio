@@ -132,7 +132,7 @@ const projects = [
     descKey:  'projects.items.frontendRbac.description',
     stack:    ['Vue 3', 'TypeScript', 'Pinia', 'Vue Router', 'Axios', 'TailwindCSS'],
     repoUrl:  'https://github.com/LuisOrtizR/frontend-auth-rbac',
-    demoUrl:  'https://frontend-auth-rbac.vercel.app/login',
+    demoUrl:  'https://solicitudes-app-one.vercel.app/login',
     featured: true,
     icon:     IconShield,
   },
