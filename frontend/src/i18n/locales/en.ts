@@ -209,7 +209,16 @@ export default {
     featured: 'Featured',
     code: 'Code',
     liveDemo: 'Live demo',
+    carousel: {
+      prev: 'Previous image',
+      next: 'Next image',
+      goTo: 'Go to image',
+    },
     items: {
+      ticketflow: {
+        title: 'TicketFlow — Request Management',
+        description: 'A full-stack ticket management platform that gives support teams complete visibility and traceability over their operations. Node.js/Express backend with PostgreSQL, JWT authentication, Zod validation, and security hardening (Helmet, rate limiting); includes automated email notifications and scheduled jobs. Vue 3 + TypeScript frontend with a Chart.js analytics dashboard to spot bottlenecks and optimize response times. Deployed on Vercel and Render.',
+      },
       aiweb: {
         title: 'AIWeb CREATOR',
         description: 'Full-stack web agency platform to manage services, projects, quotes, and clients. Built with Vue 3, Node.js, Supabase and Docker. Features JWT auth, role-based access, AI integration, and cloud image storage.',
