@@ -10,7 +10,7 @@ const PROFILE_SNAPSHOT = {
   availability: 'Disponibilidad inmediata | Presencial o remota.',
   role: 'Desarrollador de software con experiencia en automatización con IA, desarrollo backend con Python y JavaScript, y desarrollo full stack con Vue.js 3 y TypeScript.',
   summary: 'Desarrollador de software con sólida experiencia en automatización de procesos con inteligencia artificial, desarrollo backend con Python y JavaScript (Node.js), integración de modelos de IA en flujos de negocio con OpenClaw y n8n, y desarrollo full stack con Vue.js 3 y TypeScript. También cuenta con experiencia en APIs REST, seguridad con JWT/RBAC, bases de datos relacionales y no relacionales, despliegues con Docker, Render y Vercel, y metodologías ágiles Scrum.',
-  stack: ['Python', 'JavaScript', 'TypeScript', 'SQL', 'Node.js', 'Express', 'Vue 3', 'PostgreSQL', 'MySQL', 'MongoDB', 'JWT', 'RBAC', 'Docker', 'Render', 'Vercel'],
+  stack: ['Python', 'JavaScript', 'TypeScript', 'SQL', 'Node.js', 'Express', 'Fastify', 'Prisma', 'Vue 3', 'PostgreSQL', 'MySQL', 'MongoDB', 'JWT', 'RBAC', 'Docker', 'Render', 'Vercel'],
   strengths: [
     'Arquitectura de APIs y servicios backend escalables (Node.js, Express, TypeScript).',
     'Automatización de procesos e integración de modelos de IA (LLMs) con n8n y OpenClaw.',
@@ -19,16 +19,13 @@ const PROFILE_SNAPSHOT = {
     'Desarrollo de experiencias web modernas con Vue 3 y TypeScript.'
   ],
   experience: [
+    'Desarrollador Full Stack — Proyecto RoMa (romascience.com) (jun 2026 - actualidad).',
     'Desarrollador — Automatización e IA — Azteca Internacional SAS (mar 2026 - jun 2026).',
-    'Asesor de Servicio al Cliente N1 — Customer Operation Success SAS (GroupCos) (sep 2025 - ene 2026).',
-    'Intern SENA — Process Performance — SLB (Schlumberger) (dic 2024 - ago 2025).',
-    'Creador de Experiencia al Cliente — Emtelco (mar 2022 - sep 2022).',
-    'Supervisor de Calidad — Personal Temporal y Asesorías (oct 2016 - mar 2017).'
+    'Intern SENA — Process Performance — SLB (Schlumberger) (dic 2024 - ago 2025).'
   ],
   projects: [
-    'Sistema de Autenticación y Autorización RBAC — API REST con Node.js/Express, JWT y Vue.js 3 + TypeScript, desplegado en Render y Vercel.',
-    'SaaS Multitenant Platform — Plataforma dockerizada con separación de datos por tenant, organizaciones y usuarios.',
-    'Portafolio Profesional — Portafolio moderno desplegado en producción con stack actual.'
+    'TicketFlow — Plataforma de gestión de tickets y solicitudes de soporte. Backend en Node.js/Express con PostgreSQL, JWT y Zod; frontend en Vue 3 + TypeScript con dashboard de analítica (Chart.js). Desplegada en Vercel y Render.',
+    'RoMa — Sitio corporativo multilenguaje (ES/EN) con formulario de contacto seguro y panel administrativo. Backend en Fastify con Prisma; frontend en Vue 3 + TypeScript.'
   ],
   education: [
     'Tecnólogo en Implementación y Gestión de Bases de Datos (SENA, en curso 2026-2028).',
