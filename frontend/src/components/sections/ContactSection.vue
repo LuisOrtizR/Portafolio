@@ -6,7 +6,7 @@
         <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-sky-400">{{ t('contact.tag') }}</p>
       </div>
 
-      <div class="premium-card rounded-[32px] p-8 shadow-[0_20px_70px_rgba(0,0,0,0.24)] sm:p-10 lg:p-12">
+      <div class="premium-card rounded-[32px] p-8 shadow-[0_20px_70px_rgba(0,0,0,0.24)] sm:p-10 lg:p-12" v-reveal>
         <h2 class="mb-6 font-['Syne'] text-3xl font-black leading-[1.1] text-white sm:text-4xl md:text-5xl wrap-break-word">
           {{ t('contact.heading1') }}<br/>
           <span class="text-sky-400">{{ t('contact.heading2') }}</span>

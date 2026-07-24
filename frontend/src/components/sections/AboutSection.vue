@@ -4,7 +4,7 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-        <div>
+        <div v-reveal>
           <div class="inline-flex items-center gap-2 mb-6">
             <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
             <p class="text-sky-400 text-[11px] font-bold tracking-[0.2em] uppercase">{{ t('about.tag') }}</p>
@@ -38,7 +38,7 @@
           </div>
         </div>
 
-        <div class="relative">
+        <div class="relative" v-reveal="150">
           <div class="absolute -inset-8 bg-linear-to-br from-sky-500/8 via-transparent to-blue-600/4 rounded-3xl blur-3xl pointer-events-none" />
 
           <div class="relative overflow-hidden rounded-[28px] border border-white/10 bg-slate-950/70 shadow-[0_20px_70px_rgba(0,0,0,0.28)]">
@@ -106,6 +106,7 @@
           <div class="relative max-w-sm w-full">
             <button
               @click="lightboxOpen = false"
+              :aria-label="t('common.close')"
               class="absolute -top-3 -right-3 z-10 w-8 h-8 rounded-full bg-surface border border-white/10 text-slate-400 hover:text-white hover:bg-white/10 flex items-center justify-center transition-colors"
             >
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

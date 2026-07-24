@@ -2,7 +2,7 @@
   <section id="skills" class="px-6 py-24 md:px-12 lg:px-24 bg-bg w-full overflow-x-hidden">
     <div class="max-w-6xl mx-auto px-6 md:px-12">
 
-      <div class="text-center mb-16">
+      <div class="text-center mb-16" v-reveal>
         <div class="inline-flex items-center gap-2 mb-5">
           <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
           <p class="text-sky-400 text-[11px] font-bold tracking-[0.2em] uppercase">{{ t('skills.tag') }}</p>
@@ -14,8 +14,9 @@
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
         <div
-          v-for="group in skills"
+          v-for="(group, index) in skills"
           :key="group.categoryKey"
+          v-reveal="index * 80"
           class="group relative rounded-2xl border border-white/6 bg-surface p-6 hover:border-sky-400/25 transition-all duration-500 overflow-hidden cursor-default"
         >
           <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-linear-to-br from-sky-500/5 via-transparent to-transparent rounded-2xl pointer-events-none" />

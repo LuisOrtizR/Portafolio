@@ -1,16 +1,16 @@
 export default {
+  common: {
+    close: 'Fechar',
+    dismiss: 'Dispensar',
+  },
   nav: {
     about: 'Sobre mim',
     skills: 'Habilidades',
     projects: 'Projetos',
     experience: 'Experiência',
-    nasa: 'NASA API',
     certifications: 'Certificações',
-    askMe: 'Assistente IA',
     contact: 'Contato',
     hireMe: 'Baixar CV',
-    dashboard: 'Arquitetura',
-    more: 'Mais',
   },
   hero: {
     badge: 'Desenvolvedor de Software | Automação com IA | Python · JavaScript · Node.js · Vue.js',
@@ -55,8 +55,8 @@ export default {
     tag: 'Sobre mim',
     heading1: 'Desenvolvedor com propósito,',
     heading2: 'criando soluções que geram valor.',
-    p1: 'Sou um desenvolvedor de software focado em transformar problemas reais em soluções práticas, escaláveis e bem estruturadas. Meu trabalho combina automação, desenvolvimento backend e experiência com inteligência artificial para melhorar processos e apoiar a tomada de decisão.',
-    p2: 'Gosto de compreender o contexto de cada projeto e conectar tecnologias como Python, JavaScript, Node.js, Vue.js, OpenClaw e n8n para construir ferramentas claras, confiáveis e alinhadas às necessidades do negócio.',
+    p1: 'Sou um desenvolvedor de software full stack focado em construir soluções que resolvem problemas reais: automação de processos com inteligência artificial, APIs backend seguras e escaláveis, e experiências frontend modernas. Combino engenharia sólida com uma abordagem prática orientada a resultados de negócio.',
+    p2: 'Trabalho com Python, JavaScript e TypeScript no backend (Node.js, Express, Fastify), bancos de dados relacionais e não relacionais, e automação com OpenClaw e n8n. No frontend, construo com Vue.js 3 e TypeScript. Me interesso tanto pelo contexto de negócio por trás de cada projeto quanto pelo código por trás da solução.',
     values: {
       performance: { label: 'Desempenho', desc: 'Abordagem focada em velocidade' },
       architecture: { label: 'Arquitetura', desc: 'Escalável por design' },
@@ -104,33 +104,22 @@ export default {
       'Scrum',
     ],
   },
-  nasa: {
-    tag: 'API ao Vivo',
-    heading: 'NASA: Foto Astronômica do Dia',
-    subtitle: 'Dados em tempo real obtidos diretamente da API pública da NASA usando fetch e async/await.',
-    loading: 'Contactando a NASA…',
-    error: 'Não foi possível conectar à API da NASA.',
-    retry: 'Tentar novamente',
-    seeMore: 'Ver mais ↓',
-    seeLess: 'Ver menos ↑',
-    viewHd: 'Ver em HD',
-  },
   experience: {
     tag: 'Trajetória',
     heading: 'Minha Jornada Profissional',
-    subtitle: 'Uma linha do tempo que reflete a minha evolução desde a operação e o atendimento até a melhoria contínua com forte foco tecnológico.',
+    subtitle: 'Uma linha do tempo focada em desenvolvimento de software, automação e inteligência artificial.',
     items: {
+      roma: {
+        title: 'Desenvolvedor Full Stack — Projeto RoMa',
+        company: 'RoMa (romascience.com)',
+        period: 'Jun 2026 – Atualmente',
+        desc: 'Desenho e desenvolvimento end-to-end do site corporativo e da plataforma de contato da RoMa: backend em Fastify com Prisma e PostgreSQL, autenticação JWT e painel administrativo; frontend em Vue 3 e TypeScript com suporte multilíngue (ES/EN).',
+      },
       azteca: {
         title: 'Desenvolvedor — Automação e IA',
         company: 'Azteca Internacional SAS',
         period: 'Mar 2026 – Jun 2026',
         desc: 'Desenho e desenvolvo fluxos de automação com OpenClaw e n8n, integrando APIs externas, bancos de dados relacionais e modelos de inteligência artificial para apoiar processos operacionais com maior eficiência e rastreabilidade.',
-      },
-      groupcos: {
-        title: 'Consultor de Atendimento ao Cliente N1',
-        company: 'Customer Operation Success SAS (GroupCos)',
-        period: 'Set 2025 – Jan 2026',
-        desc: 'Atendo solicitações de clientes em ambientes de alto volume, mantendo padrões de qualidade e tempos de resposta, além de acompanhar requisitos de nível 1 conforme os procedimentos internos.',
       },
       slb: {
         title: 'Analista de Desempenho de Processos – Estagiário',
@@ -138,67 +127,6 @@ export default {
         period: 'Dez 2024 – Ago 2025',
         desc: 'Desenvolvi e otimizei processos operacionais através de automação com Microfocus Operation Orchestration e Power Automate, criei aplicativos web internos com Power Apps, e documentei dashboards em Power BI que fortaleceram a tomada de decisão baseada em dados.',
       },
-      emtelco: {
-        title: 'Criador de Experiência do Cliente',
-        company: 'Emtelco',
-        period: 'Mar 2022 – Set 2022',
-        desc: 'Contribuí para a melhoria da experiência do cliente através da gestão técnica de requisitos e da otimização de fluxos de atendimento, elevando a qualidade do serviço.',
-      },
-      quality: {
-        title: 'Supervisor de Qualidade',
-        company: 'Personal Temporal y Asesorías',
-        period: 'Out 2016 – Mar 2017',
-        desc: 'Liderei o acompanhamento de padrões de qualidade e o controle de processos operacionais, reforçando disciplina e conformidade nas operações.',
-      }
-    }
-  },
-  dashboard: {
-    tag: 'Infraestrutura & APIs',
-    heading: 'Arquitetura Full Stack ao Vivo',
-    subtitle: 'Demonstração técnica de integração: Backend em Node.js (TS), gestão de cache, agregação de múltiplas APIs e consumo assíncrono do frontend.',
-    weather: {
-      title: 'Integração Weather API',
-      feelsLike: 'Sensação',
-      humidity: 'Umidade',
-      wind: 'Vento',
-    },
-    market: {
-      title: 'Agregador Financeiro',
-      gainers: 'Altas',
-      losers: 'Baixas',
-      volume: 'Vol.',
-    },
-    holidays: {
-      title: 'Lógica de Feriados Multi-Fonte',
-      today: 'Hoje',
-      upcoming: 'Próximos',
-      noHolidays: 'Sem feriados hoje',
-    },
-    status: {
-      live: 'Sincronizado',
-      offline: 'Desconectado',
-      loading: 'Consultando Backend...',
-      systemActive: 'Sistema Ativo',
-      syncing: 'Sincronizando Dados...',
-    },
-    analytics: {
-      weatherTitle: 'Distribuição Climática Global',
-      weatherSubtitle: 'Métricas ambientais processadas via REST API',
-      marketTitle: 'Análise de Mercado',
-      holidayTitle: 'Distribuição de Feriados',
-      activeToday: 'Ativos Hoje',
-      forecast: 'Previsão',
-      humidity: 'Umidade Atmosférica',
-      avgTemp: 'Temp. Global Média',
-      marketStatus: 'Status do Mercado',
-      activeHolidays: 'Feriados Ativos',
-      connectedNodes: 'Nós Conectados',
-      regions: {
-        all: 'Todas as Regiões',
-        CO: 'Colômbia',
-        US: 'EUA',
-        global: 'Global (Outros)',
-      }
     }
   },
   projects: {
@@ -223,30 +151,12 @@ export default {
         title: 'RoMa — Site Corporativo e Contato',
         description: 'Site corporativo multilíngue (ES/EN) para a RoMa com formulário de contato seguro e painel administrativo. Backend em Fastify com Prisma, autenticação JWT com cookies httpOnly, hash de senhas com Argon2, validação com Zod, rate limiting, notificações por e-mail via Nodemailer e exportação de solicitações para Excel. Frontend em Vue 3 + TypeScript com Pinia, vue-i18n, validação de formulários com vee-validate e visualização de dados com Chart.js.',
       },
-      aiweb: {
-        title: 'AIWeb CREATOR',
-        description: 'Plataforma fullstack de agência web para gerenciar serviços, projetos, orçamentos e clientes. Construída com Vue 3, Node.js, Supabase e Docker. Inclui autenticação JWT, papéis, integração com IA e armazenamento de imagens na nuvem.',
-      },
-      frontendRbac: {
-        title: 'Sistema de Gestão de Acessos',
-        description: 'Dashboard administrativo completo para gerenciar usuários, papéis e solicitações de acesso. Construído com Vue 3, Pinia e Vue Router com rotas protegidas e rastreamento de status em tempo real.',
-      },
-      saas: {
-        title: 'Plataforma SaaS Multitenant',
-        description: 'Plataforma SaaS multitenant dockerizada com isolamento de dados por organização. Desenvolvimento ágil gerenciado com Scrum no GitHub Projects.',
-      },
-      portfolio: {
-        title: 'Portfólio de Desenvolvedor',
-        description: 'SPA moderna com suporte multilíngue (EN/ES/PT), construída com Vue 3, TypeScript e TailwindCSS. Arquitetura escalável com vue-i18n e detecção automática de idioma.',
-      },
     },
   },
   aiChat: {
     title: 'Luis AI Assistant',
     reset: 'Limpar',
     tag: 'IA · Pergunte-me o que quiser',
-    heading: 'Converse com meu CV',
-    subtitle: 'Pergunte sobre minha experiência, projetos ou disponibilidade. Desenvolvido com IA.',
     online: 'Online',
     placeholder: 'Pergunte algo sobre Luis...',
     thinking: 'Pensando...',
@@ -305,6 +215,5 @@ export default {
   footer: {
     builtWith: 'Construído com Vue 3 + TypeScript + TailwindCSS',
     available: 'Disponível para trabalho',
-    dashboardApi: 'Arquitetura Full Stack ao Vivo',
   },
 }

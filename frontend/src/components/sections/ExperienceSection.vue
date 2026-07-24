@@ -7,7 +7,7 @@
 
     <div class="max-w-6xl mx-auto px-6 md:px-12 relative z-10">
 
-      <div class="text-center mb-24">
+      <div class="text-center mb-24" v-reveal>
         <div class="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full bg-sky-400/5 border border-sky-400/10">
           <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
           <p class="text-sky-400 text-[10px] font-black tracking-[0.2em] uppercase italic">{{ t('experience.tag') }}</p>
@@ -27,6 +27,7 @@
           <div
             v-for="(item, index) in timelineItems"
             :key="item.key"
+            v-reveal="index * 120"
             class="relative flex flex-col md:flex-row items-center group md:mb-32 last:mb-0"
           >
             <div
@@ -84,7 +85,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { Briefcase, Zap, ShieldCheck, Sparkles, Headphones } from 'lucide-vue-next'
+import { Briefcase, Zap, Sparkles } from 'lucide-vue-next'
 
 defineOptions({ name: 'ExperienceSection' })
 
@@ -92,24 +93,16 @@ const { t } = useI18n()
 
 const timelineItems = [
   {
-    key: 'azteca',
-    icon: Sparkles
+    key: 'roma',
+    icon: Briefcase
   },
   {
-    key: 'groupcos',
-    icon: Headphones
+    key: 'azteca',
+    icon: Sparkles
   },
   {
     key: 'slb',
     icon: Zap
   },
-  {
-    key: 'emtelco',
-    icon: Briefcase
-  },
-  {
-    key: 'quality',
-    icon: ShieldCheck
-  }
 ]
 </script>

@@ -7,7 +7,12 @@
     <div
       v-if="visible"
       @click="toggleChat"
+      @keydown.enter="toggleChat"
+      @keydown.space.prevent="toggleChat"
+      role="button"
+      tabindex="0"
       :title="t('aiChat.tag')"
+      :aria-label="t('aiChat.tag')"
       class="fixed bottom-6 right-6 z-40 group flex items-center gap-2 cursor-pointer"
       :style="{ transform: `translateY(${offsetY}px)` }"
     >
@@ -25,6 +30,7 @@
         >
           <button
             @click.stop="showNotification = false"
+            :aria-label="t('common.dismiss')"
             class="absolute top-2 right-2 p-1 text-slate-500 hover:text-white transition-colors"
           >
             <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

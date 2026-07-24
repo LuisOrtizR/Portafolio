@@ -1,7 +1,7 @@
 <template>
   <section id="projects" class="px-6 py-24 md:px-12 lg:px-24 bg-surface w-full overflow-x-hidden">
     <div class="max-w-6xl mx-auto px-6 md:px-12">
-      <div class="mb-12 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+      <div class="mb-12 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between" v-reveal>
         <div>
           <div class="mb-5 inline-flex items-center gap-2">
             <span class="h-1.5 w-1.5 rounded-full bg-sky-400 animate-pulse"></span>
@@ -28,8 +28,9 @@
 
       <div class="space-y-12">
         <div
-          v-for="project in projects"
+          v-for="(project, index) in projects"
           :key="project.id"
+          v-reveal="index * 120"
           class="group relative flex flex-col overflow-hidden rounded-[28px] border border-white/10 bg-bg/70 shadow-[0_20px_60px_rgba(0,0,0,0.2)] transition-all duration-500 hover:border-sky-400/30 hover:shadow-[0_24px_80px_rgba(56,189,248,0.12)]"
         >
           <div class="flex items-start justify-between gap-4 p-6 pb-4">

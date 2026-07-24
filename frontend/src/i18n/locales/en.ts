@@ -1,16 +1,16 @@
 export default {
+  common: {
+    close: 'Close',
+    dismiss: 'Dismiss',
+  },
   nav: {
     about: 'About',
     skills: 'Skills',
     projects: 'Projects',
     experience: 'Experience',
-    nasa: 'NASA API',
     certifications: 'Certifications',
-    askMe: 'AI Assistant',
     contact: 'Contact',
     hireMe: 'Download CV',
-    dashboard: 'Architecture',
-    more: 'More',
   },
   hero: {
     badge: 'Software Developer | AI Automation | Python · JavaScript · Node.js · Vue.js',
@@ -55,8 +55,8 @@ export default {
     tag: 'About me',
     heading1: 'Developer with purpose,',
     heading2: 'building solutions that create value.',
-    p1: "I’m a software developer focused on turning real-world problems into practical, scalable, and well-structured solutions. My work combines automation, backend development, and experience with artificial intelligence to improve processes and support better decision-making.",
-    p2: 'I like to understand the context behind each project and connect tools such as Python, JavaScript, Node.js, Vue.js, OpenClaw, and n8n to build clear, reliable solutions that fit business needs.',
+    p1: "I'm a full-stack software developer focused on building solutions that solve real problems: AI-driven process automation, secure and scalable backend APIs, and modern frontend experiences. I combine solid engineering with a practical, business-outcome-oriented approach.",
+    p2: 'I work with Python, JavaScript, and TypeScript on the backend (Node.js, Express, Fastify), relational and non-relational databases, and automation with OpenClaw and n8n. On the frontend I build with Vue.js 3 and TypeScript. I care as much about the business context behind a project as about the code behind the solution.',
     values: {
       performance: { label: 'Performance', desc: 'Speed-first approach' },
       architecture: { label: 'Architecture', desc: 'Scalable by design' },
@@ -104,33 +104,22 @@ export default {
       'Scrum',
     ],
   },
-  nasa: {
-    tag: 'Live API',
-    heading: 'NASA: Astronomy Picture of the Day',
-    subtitle: "Real-time data fetched directly from NASA's public API using fetch and async/await.",
-    loading: 'Contacting NASA…',
-    error: 'Error loading data.',
-    retry: 'Retry',
-    viewHd: 'View HD',
-    seeMore: 'See more',
-    seeLess: 'See less',
-  },
   experience: {
     tag: 'Trajectory',
     heading: 'My Professional Journey',
-    subtitle: 'A timeline that reflects my evolution from operations and customer service to continuous improvement with a strong technological focus.',
+    subtitle: 'A timeline focused on software development, automation, and artificial intelligence.',
     items: {
+      roma: {
+        title: 'Full Stack Developer — RoMa Project',
+        company: 'RoMa (romascience.com)',
+        period: 'Jun 2026 – Present',
+        desc: "End-to-end design and development of RoMa's corporate site and contact platform: Fastify backend with Prisma and PostgreSQL, JWT authentication and admin panel; Vue 3 + TypeScript frontend with multilingual support (ES/EN).",
+      },
       azteca: {
         title: 'Developer — Automation & AI',
         company: 'Azteca Internacional SAS',
         period: 'Mar 2026 – Jun 2026',
         desc: 'I design and develop automation flows with OpenClaw and n8n, integrating external APIs, relational databases, and AI models to support operational processes with greater efficiency and traceability.',
-      },
-      groupcos: {
-        title: 'Customer Service Advisor N1',
-        company: 'Customer Operation Success SAS (GroupCos)',
-        period: 'Sep 2025 – Jan 2026',
-        desc: 'I support customer requests in high-volume environments while maintaining quality standards and response times, and I manage level 1 requirements according to internal procedures.',
       },
       slb: {
         title: 'Process Performance Analyst – Intern',
@@ -138,67 +127,6 @@ export default {
         period: 'Dec 2024 – Aug 2025',
         desc: 'I designed and optimized operational processes through automation with Microfocus Operation Orchestration and Power Automate, built internal web apps with Power Apps, and documented Power BI dashboards that strengthened data-driven decision-making.',
       },
-      emtelco: {
-        title: 'Customer Experience Creator',
-        company: 'Emtelco',
-        period: 'Mar 2022 – Sep 2022',
-        desc: 'I contributed to improving customer experience through the technical management of requirements and optimization of service flows, raising service quality.',
-      },
-      quality: {
-        title: 'Quality Supervisor',
-        company: 'Personal Temporal y Asesorías',
-        period: 'Oct 2016 – Mar 2017',
-        desc: 'I led the monitoring of quality standards and operational process control, reinforcing discipline and compliance in daily operations.',
-      }
-    }
-  },
-  dashboard: {
-    tag: 'Infrastructure & APIs',
-    heading: 'Live Full Stack Architecture',
-    subtitle: 'Technical integration demo: Node.js (TS) backend, cache management, multi-API aggregation, and asynchronous consumption from the frontend.',
-    weather: {
-      title: 'Weather API Integration',
-      feelsLike: 'Feels like',
-      humidity: 'Humidity',
-      wind: 'Wind',
-    },
-    market: {
-      title: 'Financial Aggregator',
-      gainers: 'Gainers',
-      losers: 'Losers',
-      volume: 'Vol.',
-    },
-    holidays: {
-      title: 'Multi-Source Holiday Logic',
-      today: 'Today',
-      upcoming: 'Upcoming',
-      noHolidays: 'No holidays today',
-    },
-    status: {
-      live: 'Synced',
-      offline: 'Offline',
-      loading: 'Querying Backend...',
-      systemActive: 'System Active',
-      syncing: 'Synchronizing Data...',
-    },
-    analytics: {
-      weatherTitle: 'Global Climate Distribution',
-      weatherSubtitle: 'Environmental metrics processed via REST API',
-      marketTitle: 'Market Analytics',
-      holidayTitle: 'Holiday Distribution',
-      activeToday: 'Active Today',
-      forecast: 'Forecast',
-      humidity: 'Atmospheric Humidity',
-      avgTemp: 'Avg Global Temp',
-      marketStatus: 'Market Status',
-      activeHolidays: 'Active Holidays',
-      connectedNodes: 'Connected Nodes',
-      regions: {
-        all: 'All Regions',
-        CO: 'Colombia',
-        US: 'United States',
-        global: 'Global (Other)',
-      }
     }
   },
   projects: {
@@ -223,30 +151,12 @@ export default {
         title: 'RoMa — Corporate Site & Contact Platform',
         description: 'Multilingual (ES/EN) corporate site for RoMa with a secure contact form and admin panel. Fastify backend with Prisma, JWT authentication with httpOnly cookies, Argon2 password hashing, Zod validation, rate limiting, email notifications via Nodemailer, and Excel export for submissions. Vue 3 + TypeScript frontend with Pinia, vue-i18n, vee-validate form validation, and Chart.js data visualization.',
       },
-      aiweb: {
-        title: 'AIWeb CREATOR',
-        description: 'Full-stack web agency platform to manage services, projects, quotes, and clients. Built with Vue 3, Node.js, Supabase and Docker. Features JWT auth, role-based access, AI integration, and cloud image storage.',
-      },
-      frontendRbac: {
-        title: 'Access Management System',
-        description: 'Full-featured admin dashboard for managing users, roles, and access requests. Built with Vue 3, Pinia, and Vue Router with protected routes and real-time status tracking.',
-      },
-      saas: {
-        title: 'SaaS Multitenant Platform',
-        description: 'Dockerized multitenant SaaS platform with per-organization data isolation. Agile development managed with Scrum on GitHub Projects.',
-      },
-      portfolio: {
-        title: 'Developer Portfolio',
-        description: 'Modern SPA with multilingual support (EN/ES/PT), built with Vue 3, TypeScript and TailwindCSS. Scalable architecture with vue-i18n and auto locale detection.',
-      },
     },
   },
   aiChat: {
     title: 'Luis AI Assistant',
     reset: 'Clear',
     tag: 'AI · Ask me anything',
-    heading: 'Chat with my CV',
-    subtitle: 'Ask about my experience, projects or availability. Powered by AI.',
     online: 'Online',
     placeholder: 'Ask something about Luis...',
     thinking: 'Thinking...',
@@ -305,6 +215,5 @@ export default {
   footer: {
     builtWith: 'Built with Vue 3 + TypeScript + TailwindCSS',
     available: 'Available for work',
-    dashboardApi: 'Live Full Stack Architecture',
   },
 }

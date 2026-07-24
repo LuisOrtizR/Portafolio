@@ -2,7 +2,7 @@
   <section id="certifications" class="px-6 py-24 md:px-12 lg:px-24 bg-surface w-full overflow-x-hidden">
     <div class="max-w-6xl mx-auto px-6 md:px-12">
 
-      <div class="text-center mb-14">
+      <div class="text-center mb-14" v-reveal>
         <div class="inline-flex items-center gap-2 mb-5">
           <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
           <p class="text-sky-400 text-[11px] font-bold tracking-[0.2em] uppercase">{{ t('certifications.tag') }}</p>
@@ -14,8 +14,9 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
         <div
-          v-for="cert in certifications"
+          v-for="(cert, index) in certifications"
           :key="cert.id"
+          v-reveal="index * 100"
           class="group relative rounded-2xl border border-white/6 bg-bg overflow-hidden hover:border-sky-400/25 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)] cursor-pointer"
           @click="openCert(cert)"
         >
@@ -157,6 +158,7 @@
                 </a>
                 <button
                   @click="activeCert = null"
+                  :aria-label="t('common.close')"
                   class="w-8 h-8 rounded-full bg-surface border border-white/10 text-slate-400 hover:text-white flex items-center justify-center transition-colors hover:bg-white/10"
                 >
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
