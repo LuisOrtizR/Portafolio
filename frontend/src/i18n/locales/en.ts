@@ -219,6 +219,10 @@ export default {
         title: 'TicketFlow — Request Management',
         description: 'A full-stack ticket management platform that gives support teams complete visibility and traceability over their operations. Node.js/Express backend with PostgreSQL, JWT authentication, Zod validation, and security hardening (Helmet, rate limiting); includes automated email notifications and scheduled jobs. Vue 3 + TypeScript frontend with a Chart.js analytics dashboard to spot bottlenecks and optimize response times. Deployed on Vercel and Render.',
       },
+      roma: {
+        title: 'RoMa — Corporate Site & Contact Platform',
+        description: 'Multilingual (ES/EN) corporate site for RoMa with a secure contact form and admin panel. Fastify backend with Prisma, JWT authentication with httpOnly cookies, Argon2 password hashing, Zod validation, rate limiting, email notifications via Nodemailer, and Excel export for submissions. Vue 3 + TypeScript frontend with Pinia, vue-i18n, vee-validate form validation, and Chart.js data visualization.',
+      },
       aiweb: {
         title: 'AIWeb CREATOR',
         description: 'Full-stack web agency platform to manage services, projects, quotes, and clients. Built with Vue 3, Node.js, Supabase and Docker. Features JWT auth, role-based access, AI integration, and cloud image storage.',

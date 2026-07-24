@@ -26,7 +26,7 @@
         </a>
       </div>
 
-      <div>
+      <div class="space-y-12">
         <div
           v-for="project in projects"
           :key="project.id"
@@ -118,6 +118,20 @@ const ticketflowImages = [
   { file: '14-analitica',        alt: 'Dashboard de analítica y métricas' },
 ].map(({ file, alt }) => ({ src: `/images/projects/solicitudes/${file}.png`, alt }))
 
+const romaImages = [
+  { file: '01-hero',               alt: 'Sección hero del sitio de RoMa' },
+  { file: '02-value-proposition',  alt: 'Sección de propuesta de valor' },
+  { file: '03-services',           alt: 'Sección de servicios' },
+  { file: '04-methodology',        alt: 'Sección de metodología de trabajo' },
+  { file: '05-about',              alt: 'Sección Acerca de RoMa' },
+  { file: '06-roma-plus',          alt: 'Sección RoMa+' },
+  { file: '07-contact-empty',      alt: 'Formulario de contacto vacío' },
+  { file: '08-contact-filled',     alt: 'Formulario de contacto completado' },
+  { file: '09-privacy-policy',     alt: 'Página de política de privacidad' },
+  { file: '10-login',              alt: 'Pantalla de inicio de sesión del panel administrativo' },
+  { file: '11-register',           alt: 'Pantalla de registro del panel administrativo' },
+].map(({ file, alt }) => ({ src: `/images/projects/roma/${file}.png`, alt }))
+
 const projects = [
   {
     id: 1,
@@ -128,6 +142,16 @@ const projects = [
     demoUrl:  'https://solicitudes-app-one.vercel.app/',
     featured: true,
     images:   ticketflowImages,
+  },
+  {
+    id: 2,
+    titleKey: 'projects.items.roma.title',
+    descKey:  'projects.items.roma.description',
+    stack:    ['Vue 3', 'TypeScript', 'Fastify', 'Prisma', 'JWT', 'Zod', 'Chart.js', 'TailwindCSS'],
+    repoUrl:  'https://github.com/ortizluisdev/sst-platform',
+    demoUrl:  'https://www.romascience.com/en/',
+    featured: false,
+    images:   romaImages,
   },
 ]
 </script>
